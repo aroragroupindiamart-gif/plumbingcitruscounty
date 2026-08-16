@@ -1,0 +1,17 @@
+name = "plumbingcitruscounty"
+compatibility_date = "2026-07-10"
+compatibility_flags = ["nodejs_compat"]
+main = ".open-next/worker.js"
+assets = { directory = ".open-next/assets", binding = "ASSETS", not_found_handling = "none" }
+
+[env.production.vars]
+NEXT_PUBLIC_BRAND_NAME = "Demo Plumbing Solutions"
+NEXT_PUBLIC_PHONE_NUMBER = "(800) 555-9999"
+NEXT_PUBLIC_PHONE_TEL = "8005559999"
+NEXT_PUBLIC_SITE_URL = "https://demo-plumbing.workers.dev"
+NEXT_PUBLIC_NICHE = "Plumbing"
+NEXT_PUBLIC_NICHE_PLURAL = "Plumbers"
+NEXT_PUBLIC_NICHE_SINGULAR = "Plumber"
+NEXT_PUBLIC_SCHEMA_TYPE = "Plumber"
+NEXT_PUBLIC_CONTENT_SALT = "0"
+
