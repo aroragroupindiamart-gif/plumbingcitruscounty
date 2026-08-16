@@ -18,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="UwI5Owu_rQQsrMmhd-NPzJKYFb_H3AMoazQaW0FQrTU" />
         {/* Google AdSense — plain <script> tag so crawlers see it immediately */}
         {ADSENSE_ID && (
           // eslint-disable-next-line @next/next/no-sync-scripts
