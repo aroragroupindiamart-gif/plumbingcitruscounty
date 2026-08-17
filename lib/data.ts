@@ -176,9 +176,7 @@ export function getDripCount(totalStatesCount: number): number {
     return Math.min(Number(envCount), totalStatesCount);
   }
   const launchStr = process.env.NEXT_PUBLIC_LAUNCH_DATE;
-  if (!launchStr) return totalStatesCount;
-
-  const launch = new Date(launchStr).getTime();
+  const launch = launchStr ? new Date(launchStr).getTime() : Date.now();
   const now = Date.now();
   const daysElapsed = Math.max(0, Math.floor((now - launch) / (1000 * 60 * 60 * 24)));
 
