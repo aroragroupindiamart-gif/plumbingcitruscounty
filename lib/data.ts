@@ -10,6 +10,7 @@
 
 import locationsRaw from "./data/locations.json";
 import servicesRaw from "./data/services.json";
+import { LAUNCH_DATE } from "./config";
 
 export interface Service {
   id: number;
@@ -175,8 +176,8 @@ export function getDripCount(totalStatesCount: number): number {
   if (envCount && !isNaN(Number(envCount))) {
     return Math.min(Number(envCount), totalStatesCount);
   }
-  const launchStr = process.env.NEXT_PUBLIC_LAUNCH_DATE;
-  const launch = launchStr ? new Date(launchStr).getTime() : Date.now();
+  const launchStr = LAUNCH_DATE || process.env.NEXT_PUBLIC_LAUNCH_DATE || "2026-08-16";
+  const launch = new Date(launchStr).getTime();
   const now = Date.now();
   const daysElapsed = Math.max(0, Math.floor((now - launch) / (1000 * 60 * 60 * 24)));
 
